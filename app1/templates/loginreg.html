@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="bg-body-secondary">
+    <header>
+        <div class="lefthead">
+            <img class="headerimg" src="static\img\logo.PNG" alt="logo image">
+            <p class="welcom fs-3 text-body-Light">Welcome to ContractorsPot</p>
+        </div>
+        <div class="righthead">
+            <a href="/" class="text-decoration-none fs-6 text-light text-opacity-75">Home</a>
+        </div>
+    </header>
+
+    <div class="container p-3 pb-1">
+        <div class="red p-3 pt-4 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h5 class="text-center pb-4 fw-bold">Register</h5>
+            <form method="POST" action="/register" class="row g-3">
+            {% csrf_token %}
+                <div class="col-md-6">
+                    <label for="fname" class="form-label fw-bold">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="first_name">
+                </div>
+                <div class="col-md-6">
+                    <label for="lname" class="form-label fw-bold">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="last_name">
+                </div>
+                <div class="col-12">
+                    <label for="emailAddress" class="form-label fw-bold">Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" name="email">
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label fw-bold">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="col-md-6">
+                    <label for="passwordc" class="form-label fw-bold">Confirm PWD</label>
+                    <input type="password" class="form-control" id="passwordc" name="pwdconfirm">
+                </div>
+                <div class="col-md-6">
+                    <label for="spcialized_in" class="form-label fw-bold">Spcialized_in</label>
+                    <input type="text" class="form-control" id="spcialized_in" name="spcialized_in">
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label fw-bold">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="123-456-789">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input type="submit" value="Register" class="btn btn-info btn-lg ">
+                </div>
+            </form>
+
+        </div>
+        <div class="red p-3 pt-4 mb-n8 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <h5 class="text-center pb-5 fw-bold">Do yo have an account?! Login</h5>
+            <form method="POST" action="/login" class="row g-3">
+                {% csrf_token %}
+                <div class="row mb-3">
+                    <label for="inputEmail2" class="col-sm-2 col-form-label fw-bold">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail2" name="email2">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="Password2" class="col-sm-2 col-form-label fw-bold">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="Password2" name="inputPassword2">
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                    <input type="submit" value="Login" class="btn btn-info btn-lg">
+                </div>
+                <img class="loginimg" src="static\img\contractors.PNG" alt="contractors">
+            </form>
+        </div>
+    </div>
+    <div class="errors">
+        {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>  
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <footer class="text-center">
+        <img class="footerimg" src="static\img\logo.PNG" alt="logo image">
+    </footer>
+</body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractors</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="bg-body-secondary">
+    <header>
+        <div class="lefthead">
+            <img class="headerimg" src="static\img\logo.PNG" alt="logo image">
+            <p class="welcom fs-3 text-body-Light">Welcome to ContractorsPot</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <p><strong>Are you loking for a special contractor?!</strong><br> You are in the right place!
+               in our website you will find all the specialist with high qualifications
+               that will help you to finish your buildingwork easier and faster.
+               <br>
+               <strong>Are you a contractor?!</strong> <br>come with us and represent your qualifications
+               to get a work as soon as possible!
+               <img class="sectionimg" src="static\img\Contractor-CHAS.jpg" alt="contractor image">
+            </p>
+        </section>
+        <article>
+            <div class="topcontainer">
+                <h2>Find Your contractor Easier With Us</h2>
+
+                <!-- *****filter the contractors according to their specialist***** -->
+                <form action="/filtercontractors" method="post">
+                    {% csrf_token %}
+                    <SELect class="select" name="specialized_in">
+                        {% for contractor in all_contractors %}
+                        <option value="{{ contractor.spcialized_in }}">{{ contractor.spcialized_in }}</option>
+                        {% endfor %}
+                        <option value="All" selected>All</option>
+                    </SELect>
+                    <button class="selectbtn fw-bold">Select</button>
+                </form>
+            </div>
+            {% if myselection %}
+                <div class="allcontractors">
+                    {% for contractor in myselection %}
+                    <div class="cardcontractor text-center">
+                        <h5>{{ contractor.first_name }} {{ contractor.last_name }}</h5>
+                        <p>Specialized in {{ contractor.spcialized_in }}</p>
+                        <a href="/contractordetails/{{contractor.id}}" class="btn btn-info btn-sm">View</a>     
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="allcontractors">
+                    {% for contractor in all_contractors %}
+                    <div class="cardcontractor text-center">
+                        <h5>{{ contractor.first_name }} {{ contractor.last_name }}</h5>
+                        <p>Specialized in {{ contractor.spcialized_in }}</p>
+                        <a href="/contractordetails/{{contractor.id}}" class="btn btn-info btn-sm">View</a>     
+                    </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <a href="/loginreg" class="link-underline-warning float-end fw-bold">Are you a contractor? Join Us</a> 
+        </article>
+
+    </div>
+    <footer class="text-center">
+        <img class="footerimg" src="static\img\logo.PNG" alt="logo image">
+    </footer>
+</body>

@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    font-family: Georgia, serif;
+}
+header{
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(55, 155, 232);
+    padding: 0.5em 1em;
+}
+.lefthead{
+    width: 40%;
+    margin-top: 0.35%;
+}
+.righthead{
+    margin-top: 0.9%;
+}
+.button_righthead{
+    margin-top: 0.4%;
+}
+
+.headerimg{
+    width: 10%;
+    height: 2em;
+    border-radius: 50%;
+    margin-top: 0.4em;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 38em;
+    margin-left: 0;
+    margin-right: 0;  
+}
+section{
+    width: 18%;
+    border: 2px solid chocolate;
+    margin: 1em;
+    margin-left: -6.5em;
+    padding: 0.5em;
+}
+.sectionimg{
+    width: 100%;
+    height: 9em;
+    margin-top: 0.4em;
+    margin: 0em;
+}
+article{
+    width: 80%;
+    margin: 1em;
+    padding: 0.5em;
+    height: 36em;
+}
+.select{
+    width: 60%;
+    height: 2em;
+    font-weight: bolder;
+    border: 3px solid chocolate;
+    margin-top: 0.4em;
+}
+.selectbtn{
+    border: 1px solid chocolate;
+    background-color: chocolate;
+    color: white;
+    padding: 0.15em;
+}
+.welcom{
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bolder;
+    font-family: Garamond, serif;
+    color: wheat;
+}
+.topcontainer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+}
+.topcontainer1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30%;
+}
+.allcontractors{
+    display: flex;
+    justify-content: space-around;
+    overflow: scroll;
+    width: 100%;
+    height: 27em;
+    margin-top: 1em;
+    padding-top: 1em;
+    flex-wrap: wrap;
+}
+.cardcontractor{
+    width: 22%;
+    height: 30%;
+    padding: 0.5em;
+    border: 2px solid chocolate;
+    background-color: whitesmoke;
+    border-radius: 10%;
+}
+.loginimg{
+    width: 100%;
+    height: 15em;
+    margin-right: 1em;
+}
+.icon{
+    width: 4%;
+    height: 6%;
+}
+.mycard{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.mybtn{
+    display: flex;
+    justify-content: space-around;
+    width: 40%; 
+    margin-bottom: 1.6em;
+    margin-top: 1em;
+    margin-left: 11em;
+}
+.fit{
+    width: 100%;
+    height: fit-content;
+}
+.mybtn1{
+    width: 40%; 
+    margin-bottom: 0.7em;
+    margin-left: 9.5em;
+}
+.mybtn2{
+    width: 40%; 
+    margin-bottom: 1.7em;
+    margin-top: 0.7em;
+    margin-left: 10em;
+}
+footer{
+    width: 100%;
+    height: 3em;
+    background-color: rgb(55, 155, 232);
+    margin-bottom: 0;
+}
+.footerimg{
+    width: 6%;
+    height: 2em;
+    border-radius: 50%;
+    margin-top: 0.4em;
+}
+
+.red{
+    width: 45%;
+    height: 33em;
+}
+
+.errors{
+    margin:0px auto;
+    width:600px;
+    color:red;
+    text-align:left;
+}
