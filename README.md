@@ -40,3 +40,29 @@ In regards to the back end, it is done by using python language (Django framewor
 
 #### In this page the contractor can see his information and update it after he clicks on view button in previous page. Also he can see his materials, and add other materials when he clicks on add button.
 ![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/6.PNG)
+
+
+#### This is the page where the contractor can add new material.
+![Alt text]()
+
+
+#### In this page the contractor can see his material details and can delete it or go to edit it. He can reach it when he clicks on the name of the material in the that represent it.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/7.PNG)
+
+
+#### This the page where the contractor can update his material information. He can go there when clicking on edit button in the previous page.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/8.PNG)
+
+
+#### My Logo.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/logo.PNG)
+
+
+## Used technologies
+- Python
+- HTML
+- CSS
+- Bootstrap
+
+## Project creator 
+### Rawan Akram Harsha
