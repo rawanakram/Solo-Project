@@ -18,3 +18,25 @@ In regards to the back end, it is done by using python language (Django framewor
 - There are front-end and back-end validations for crate and update methods in the application.
 
 ## Templates in the application
+#### This is the main page where any user loking for a contractor can see it.It contains the all contractors which have account in the app, also the user can filter the contractors to see what he needs based on the specialist of the contractor using the dropdown selection menue.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/1.PNG)
+
+
+#### Here where the user can see the details of the contractor and his materials when he click on view button. Also the same page the contractor can see when he brows other contractors after log in.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/2.PNG)
+
+
+#### In this page the user can see the details of the materials that the contractor provide when he click on the name of the material in the previous page. Also the same page the contractor can see when he brows other contractors after log in.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/3.PNG)
+
+
+#### This is the login & registration page where the contractors can create an account or log in to their accounts if they have one. They can reach this page when they click on (Are you a contractor?! Join us) link at the left bottom in the main page.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/4.PNG)
+
+
+#### This is the page that apear for the contractor after log in or registration to the app.It contains the all contractors which have account in the app, also the user can filter the contractors to see what he needs based on the specialist of the contractor using the dropdown selection menue.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/5.PNG)
+
+
+#### In this page the contractor can see his information and update it after he clicks on view button in previous page. Also he can see his materials, and add other materials when he clicks on add button.
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/6.PNG)
