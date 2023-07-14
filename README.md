@@ -43,7 +43,7 @@ In regards to the back end, it is done by using python language (Django framewor
 
 
 #### This is the page where the contractor can add new material.
-![Alt text]()
+![Alt text](https://github.com/rawanakram/Solo-Project/blob/master/app1/static/img/9.PNG)
 
 
 #### In this page the contractor can see his material details and can delete it or go to edit it. He can reach it when he clicks on the name of the material in the that represent it.
