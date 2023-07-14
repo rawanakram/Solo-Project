@@ -13,7 +13,7 @@
     <header>
         <div class="lefthead">
             <img class="headerimg" src="{% static 'img\logo.PNG' %}" alt="logo image">
-            <p class="welcom fs-3 text-body-Light">Welcome </p>
+            <p class="welcom fs-3 text-body-Light">Welcome to ContractorsPot</p>
         </div>
         {% if 'contractor_id' not in request.session%}
         <div class="righthead">
@@ -31,7 +31,7 @@
     
     {% if 'contractor_id' not in request.session or contractor.id != request.session.contractor_id %}
     <div class="container">
-        <div class="card text-center m-5 card border-light mb-5 mx-auto w-50">
+        <div class="cardborder card text-center m-5 card border-light mb-5 mx-auto w-50">
             <div class="card-header fw-bold">
             <h5>{{ material.name }}</h5>
             </div>
@@ -52,17 +52,6 @@
 
 
     {% else %}
-    <!-- <header>
-        <div class="lefthead">
-            <img class="headerimg" src="{% static 'img\logo.PNG' %}" alt="logo image">
-            <p class="welcom fs-3 text-body-Light">Welcome </p>
-        </div>
-        <div class="righthead">
-            <a href="/contractors" class="text-decoration-none fs-6 text-light text-opacity-75">Home | </a>
-            <a href="/contractordetails/{{contractor.id}}" class="text-decoration-none fs-6 text-light text-opacity-75">Back | </a>
-            <a href="/logout" class="text-decoration-none fs-6 text-light text-opacity-75">Log out</a>
-        </div>    
-    </header> -->
     <div class="container">
         <div class="fit">
             <div class="card text-center m-5 card border-light mb-5 mx-auto w-50">

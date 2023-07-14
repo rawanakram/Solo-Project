@@ -13,7 +13,7 @@
     <header>
         <div class="lefthead">
             <img class="headerimg" src="{% static 'img\logo.PNG' %}" alt="logo image">
-            <p class="welcom fs-3 text-body-Light">Welcome </p>
+            <p class="welcom fs-3 text-body-Light">Welcome to ContractorsPot</p>
         </div>
         {% if 'contractor_id' not in request.session%}
         <div class="righthead">
@@ -28,20 +28,20 @@
            
     </header>
     {% if 'contractor_id' not in request.session or contractor.id != request.session.contractor_id %}
-    <div class="container">
-        <div class="w-50 p-3 pt-5">
+    <div class="containerinfo">
+        <div class="cinfo p-3 pt-5 shadow mb-5 mt-5 bg-body-tertiary rounded text-center">
             <p class="fw-bold fs-2">{{contractor.first_name}} {{contractor.last_name}}</p>
             <p><span class="fw-bold fs-5">Specialized in:</span> <span class="fs-4">{{contractor.spcialized_in}}</span></p>
             <p class="fw-bold fs-5">Contact Info: </p>
             <p class="fs-5"><img class="icon" src="{% static 'img\phone1.PNG' %}" alt="phone">   {{contractor.phone_num}}</p>
             <p class="fs-5"><img class="icon" src="{% static 'img\email.PNG' %}" alt="email">   {{contractor.email}}</p>
         </div>
-        <div class="w-50 p-3 pt-5">
-            <p class="fw-bold">Material I provide</p>
+        <div class="materials p-3 pt-5 ps-5 shadow mb-5 mt-5 bg-body-tertiary rounded">
+            <p class="fw-bold fs-4">Materials I provide</p>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                     {% for material in materials %}    
-                    <li class="list-group-item"><a href="/materialdetails/{{material.id}}/{{contractor.id}}" class="text-decoration-none">{{ material.name }}</a></li>
+                    <li class="list-group-item"><a href="/materialdetails/{{material.id}}/{{contractor.id}}" class="text-decoration-none fw-bold">{{ material.name }}</a></li>
                     {% endfor %}
                 </ul>
               </div>
@@ -51,7 +51,7 @@
 
     {% else %}
     <div class="container">
-        <div class="w-100 p-3 pt-3 mt-4">
+        <div class="cinfo1 p-3 pt-5 shadow mb-5 ps-5 bg-body-tertiary rounded">
             <form action="/updateinfo/{{contractor.id}}" method="post">
                 {% csrf_token %}
                 <div class="d-flex p-2">
@@ -67,7 +67,7 @@
                 <div class="d-flex p-2">
                     <div>
                         <label for="password" class="col-form-label fw-bold">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" value="{{contractor.password}}">    
+                        <input type="password" class="form-control" id="password" name="password">    
                     </div>
                     <div>
                         <label for="pwdconfirm" class="col-form-label fw-bold">Confirm Password</label>
@@ -92,12 +92,12 @@
                 </div>
             </form>
         </div>
-        <div class="w-50 p-3 pt-5">
-            <p class="fw-bold ms-5">Material I provide</p>
+        <div class="materials p-3 pt-5 ps-5 shadow mb-5 mt-5 bg-body-tertiary rounded">
+            <p class="fw-bold fs-4 ms-5">Materials I provide</p>
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                 {% for material in materials %}    
-                <li class="list-group-item"><a href="/materialdetails/{{material.id}}/{{contractor.id}}" class="text-decoration-none">{{ material.name }}</a></li>
+                <li class="list-group-item"><a href="/materialdetails/{{material.id}}/{{contractor.id}}" class="text-decoration-none fw-bold">{{ material.name }}</a></li>
                 {% endfor %}
                 </ul>
             </div>

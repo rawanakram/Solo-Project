@@ -41,15 +41,16 @@ header{
 }
 section{
     width: 18%;
-    border: 2px solid chocolate;
+    border: 3px solid chocolate;
     margin: 1em;
     margin-left: -6.5em;
     padding: 0.5em;
+    padding-top:1em ;
 }
 .sectionimg{
     width: 100%;
     height: 9em;
-    margin-top: 0.4em;
+    margin-bottom: 0em;
     margin: 0em;
 }
 article{
@@ -98,13 +99,46 @@ article{
     padding-top: 1em;
     flex-wrap: wrap;
 }
+.allcontractors1{
+    display: flex;
+    justify-content: space-around;
+    overflow: scroll;
+    width: 100%;
+    height: 27em;
+    margin-top: 1em;
+    padding-top: 1em;
+    flex-wrap: wrap;
+}
 .cardcontractor{
     width: 22%;
     height: 30%;
     padding: 0.5em;
-    border: 2px solid chocolate;
+    border: 3px solid chocolate;
     background-color: whitesmoke;
     border-radius: 10%;
+}
+.containerinfo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 38em;
+    margin-left: 0;
+    margin-right: 0;  
+}
+.cinfo{
+    width: 35%;
+    height: 70%;
+    border: 3px solid chocolate;
+}
+.cinfo1{
+    width: 50%;
+    height: 38em;
+}
+.materials{
+    border: 3px solid chocolate;
+    width: 34%;
+    height: 70%;
+    margin-top: 3em;
 }
 .loginimg{
     width: 100%;
@@ -114,6 +148,9 @@ article{
 .icon{
     width: 4%;
     height: 6%;
+}
+.cardborder{
+    border: 3px solid chocolate
 }
 .mycard{
     display: flex;
